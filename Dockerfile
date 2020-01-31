@@ -1,4 +1,4 @@
-FROM bdbstudios/base
+FROM bdbstudios/alpine-base
 
 ARG ANSIBLE_VERSION="2.9"
 ARG PIP_PACKAGES="ansible==${ANSIBLE_VERSION} ansible-lint boto boto3 botocore pycrypto pywinrm requests"
