@@ -1,7 +1,7 @@
-FROM bdbstudios/alpine-base
+FROM bdbstudios/base
 
 ARG ANSIBLE_VERSION="2.9"
-ARG PIP_PACKAGES="ansible==${ANSIBLE_VERSION} ansible-lint boto boto3 botocore pycrypto pywinrm requests molecule molecule[docker]"
+ARG PIP_PACKAGES="ansible==${ANSIBLE_VERSION} ansible-lint boto boto3 botocore pycrypto pywinrm requests"
 
 USER root
 
