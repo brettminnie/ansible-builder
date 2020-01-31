@@ -7,10 +7,10 @@ USER root
 
 # Install ansible
 RUN apk update; \
-    apk add python-dev py-setuptools build-base libffi-dev openssl-dev openssh-client; \
+    apk add python-dev py-setuptools build-base libffi-dev openssl-dev openssh-client linux-headers; \
     pip install -U pip; \
     pip install -U ${PIP_PACKAGES}; \
-    apk del python-dev build-base py-setuptools libffi-dev openssl-dev; \
+    apk del python-dev build-base py-setuptools libffi-dev openssl-dev linux-headers; \
     rm -rf ~/.cache ~/.gems; \
     rm -rf /var/cache/apk/*; \
     apk update
